@@ -14,6 +14,11 @@ consume_vegetables_less_than_1_time_daily_education <- read.csv(file="/Users/jen
 
 consume_vegetables_less_than_1_time_daily_income <- read.csv(file="/Users/jenny/Documents/School/MIS500/consume_vegetables_less_than_1_time_daily_income.csv",header=TRUE,stringsAsFactors=TRUE)
 
+summary(obesity_education$Data_Value)
+summary(obesity_income$Data_Value)
+summary(no_leisure_time_physical_activity_education$Data_Value)
+summary(no_leisure_time_physical_activity_income$Data_Value)
+
 tScore_obes_edu <- c(32.9, 35.6, 31.9, 22.7)
 tScore_obes_edulvl <- c(1, 2, 3, 4)
 my_data <- data.frame(
