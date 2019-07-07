@@ -1,0 +1,135 @@
+obesity_education <- read.csv(file="/Users/jenny/Documents/School/MIS500/obesity_education.csv",header=TRUE,stringsAsFactors=TRUE)
+
+obesity_income <- read.csv(file="/Users/jenny/Documents/School/MIS500/obesity_income.csv",header=TRUE,stringsAsFactors=TRUE)
+
+no_leisure_time_physical_activity_education <- read.csv(file="/Users/jenny/Documents/School/MIS500/no_leisure_time_physical_activity_education.csv",header=TRUE,stringsAsFactors=TRUE)
+
+no_leisure_time_physical_activity_income <- read.csv(file="/Users/jenny/Documents/School/MIS500/no_leisure_time_physical_activity_income.csv",header=TRUE,stringsAsFactors=TRUE)
+
+consume_fruits_less_than_1_time_daily_education <- read.csv(file="/Users/jenny/Documents/School/MIS500/consume_fruits_less_than_1_time_daily_education.csv",header=TRUE,stringsAsFactors=TRUE)
+
+consume_fruits_less_than_1_time_daily_income <- read.csv(file="/Users/jenny/Documents/School/MIS500/consume_fruits_less_than_1_time_daily_income.csv",header=TRUE,stringsAsFactors=TRUE)
+
+consume_vegetables_less_than_1_time_daily_education <- read.csv(file="/Users/jenny/Documents/School/MIS500/consume_vegetables_less_than_1_time_daily_education.csv",header=TRUE,stringsAsFactors=TRUE)
+
+consume_vegetables_less_than_1_time_daily_income <- read.csv(file="/Users/jenny/Documents/School/MIS500/consume_vegetables_less_than_1_time_daily_income.csv",header=TRUE,stringsAsFactors=TRUE)
+
+tScore_obes_edu <- c(32.9, 35.6, 31.9, 22.7)
+tScore_obes_edulvl <- c(1, 2, 3, 4)
+my_data <- data.frame(
+                group = rep(c("obes_edu", "obes_edulvl"), each = 4),
+                obes_edu = c(tScore_obes_edu,  tScore_obes_edulvl)
+                )
+
+print(my_data)
+
+res <- t.test(obes_edu ~ group, data = my_data, var.equal = TRUE)
+res
+
+t.test(obes_edu ~ group, data = my_data,
+        var.equal = TRUE, alternative = "less")
+
+tScore_obes_inc <- c(36.2, 34.5, 32.8, 31.9, 31.3, 26)
+tScore_obes_inclvl <- c(1, 2, 3, 4, 5, 6)
+my_data <- data.frame(
+                group = rep(c("obes_inc", "obes_inclvl"), each = 6),
+                obes_inc = c(tScore_obes_inc,  tScore_obes_inclvl)
+                )
+
+print(my_data)
+
+res <- t.test(obes_inc ~ group, data = my_data, var.equal = TRUE)
+res
+
+t.test(obes_inc ~ group, data = my_data,
+        var.equal = TRUE, alternative = "less")
+
+tScore_activity.edu <- c(42.4, 32.6, 24.7, 15.3)
+tScore_activity.edulvl <- c(1, 2, 3, 4)
+my_data <- data.frame(
+                group = rep(c("activity.edu", "activity.edulvl"), each = 4),
+                activity.edu = c(tScore_activity.edu,  tScore_activity.edulvl)
+                )
+
+print(my_data)
+
+res <- t.test(activity.edu ~ group, data = my_data, var.equal = TRUE)
+res
+
+t.test(activity.edu ~ group, data = my_data,
+        var.equal = TRUE, alternative = "less")
+
+tScore_activity.inc <- c(32.2, 27.8, 23.7, 16.3, 35.4, 38)
+tScore_activity.inclvl <- c(1, 2, 3, 4, 5, 6)
+my_data <- data.frame(
+                group = rep(c("activity.inc", "activity.inclvl"), each = 6),
+                activity.inc = c(tScore_activity.inc,  tScore_activity.inclvl)
+                )
+
+print(my_data)
+
+res <- t.test(activity.inc ~ group, data = my_data, var.equal = TRUE)
+res
+
+t.test(activity.inc ~ group, data = my_data,
+        var.equal = TRUE, alternative = "less")
+
+tScore_fruit.edu <- c(40.5, 40.9, 36.7, 28.6)
+tScore_fruit.edulvl <- c(1, 2, 3, 4)
+my_data <- data.frame(
+                group = rep(c("fruit.edu", "fruit.edulvl"), each = 4),
+                fruit.edu = c(tScore_fruit.edu,  tScore_fruit.edulvl)
+                )
+
+print(my_data)
+
+res <- t.test(fruit.edu ~ group, data = my_data, var.equal = TRUE)
+res
+
+t.test(fruit.edu ~ group, data = my_data,
+        var.equal = TRUE, alternative = "less")
+
+tScore_fruit.inc <- c(43.7, 39, 37.9, 37.4, 35.4, 31.5)
+tScore_fruit.inclvl <- c(1, 2, 3, 4, 5, 6)
+my_data <- data.frame(
+                group = rep(c("fruit.inc", "fruit.inclvl"), each = 6),
+                fruit.inc = c(tScore_fruit.inc,  tScore_fruit.inclvl)
+                )
+
+print(my_data)
+
+res <- t.test(fruit.inc ~ group, data = my_data, var.equal = TRUE)
+res
+
+t.test(fruit.inc ~ group, data = my_data,
+        var.equal = TRUE, alternative = "less")
+
+tScore_veggies.edu <- c(35.1, 22.2, 16.6, 11.5)
+tScore_veggies.edulvl <- c(1, 2, 3, 4)
+my_data <- data.frame(
+                group = rep(c("veggies.edu", "veggies.edulvl"), each = 4),
+                veggies.edu = c(tScore_veggies.edu,  tScore_veggies.edulvl)
+                )
+
+print(my_data)
+
+res <- t.test(veggies.edu ~ group, data = my_data, var.equal = TRUE)
+res
+
+t.test(veggies.edu ~ group, data = my_data,
+        var.equal = TRUE, alternative = "less")
+
+tScore_veggies.inc <- c(15.7, 11.9, 17.8, 30.9, 25.6, 22.6)
+tScore_veggies.inclvl <- c(1, 2, 3, 4, 5, 6)
+my_data <- data.frame(
+                group = rep(c("veggies.inc", "veggies.edulvl"), each = 6),
+                veggies.inc = c(tScore_veggies.inc,  tScore_veggies.inclvl)
+                )
+
+print(my_data)
+
+res <- t.test(veggies.inc ~ group, data = my_data, var.equal = TRUE)
+res
+
+t.test(veggies.inc ~ group, data = my_data,
+        var.equal = TRUE, alternative = "less")
